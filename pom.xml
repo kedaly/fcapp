@@ -90,5 +90,6 @@
 	<modules>
 		<module>core</module>
 		<module>command</module>
+		<module>rest</module>
 	</modules>
 </project>

@@ -1,5 +1,6 @@
 package com.flightcenter.demo.impl;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -170,4 +171,22 @@ public class MultiProvider implements PriceProvider
 		service.shutdown();
 
 	}
+
+	/**
+	 * Convenience to build the default for testing purposes
+	 * 
+	 * @return
+	 * @throws IOException
+	 */
+	public static PriceProvider getDefault() throws IOException
+	{
+		Set<PriceProvider> providers = Sets.newHashSet();
+		providers.add( new Provider1() );
+		providers.add( new Provider2() );
+		providers.add( new Provider3() );
+
+		return new MultiProvider( providers );
+
+	}
+
 }
