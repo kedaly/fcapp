@@ -72,7 +72,7 @@ public class FileProvider implements PriceProvider
 		// may not be the right thing to do, we might consider refactoring to have a loadSuccessFull() method
 		// in the PriceProvider interface and have the consumer validate and then raise the appropriate error
 
-		// for testing let's get the directory for the databse from an environment varable
+		// for testing let's get the directory for the database from an environment variable
 		String dir = System.getenv( "FLIGHT_DATA" );
 
 		String dataPath = null;

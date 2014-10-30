@@ -27,19 +27,33 @@ public class MultiProviderTest
 		providers.add( new Provider2() );
 		providers.add( new Provider3() );
 
-		MultiProvider provider = new MultiProvider( providers );
+		MultiProvider provider = null;
 
-		List<FlightRecord> results = provider.searchByRoute( ORGIN, DEST );
-
-		for( FlightRecord rec : results )
+		try
 		{
-			System.out.println( rec.getTextRepresentation() );
+
+			provider = new MultiProvider( providers );
+			List<FlightRecord> results = provider.searchByRoute( ORGIN, DEST );
+
+			for( FlightRecord rec : results )
+			{
+				System.out.println( rec.getTextRepresentation() );
+			}
+
+			assertEquals( NUM_RESULTS, results.size() );
+			// TODO : More tests
 		}
-
-		assertEquals( NUM_RESULTS, results.size() );
-
-		// TODO : More tests
-
+		finally
+		{
+			try
+			{
+				provider.close();
+			}
+			catch( Exception e )
+			{
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 	}
-
 }
