@@ -1,4 +1,4 @@
-Flight Center Demo / POC App
+Flight Network Demo / POC App
 ============================
 
 Modules
