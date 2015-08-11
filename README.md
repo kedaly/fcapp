@@ -3,7 +3,7 @@ Flight Network Demo / POC App
 
 Modules
 =======
-core - is the core business logic
+core - is the core business logic <br/>
 command - is the command prompt
 data - data files
 rest - rest api server
