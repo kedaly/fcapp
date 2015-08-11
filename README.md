@@ -4,9 +4,9 @@ Flight Network Demo / POC App
 Modules
 =======
 core - is the core business logic <br/>
-command - is the command prompt
-data - data files
-rest - rest api server
+command - is the command prompt <br/>
+data - data files <br/>
+rest - rest api server <br/>
 
 Build
 =====
